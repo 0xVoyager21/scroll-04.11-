@@ -2,7 +2,7 @@ import random
 import time
 
 from loguru import logger
-from config import OMNISEA_CONTRACT, OMNISEA_ABI
+from config import OMNISEA_CONTRACT, OMNISEA_ABI, RANDOM_WORDS
 from utils.gas_checker import check_gas
 from utils.helpers import retry
 from .account import Account
@@ -16,7 +16,7 @@ class Omnisea(Account):
 
     @staticmethod
     def generate_collection_data():
-        title = "".join(random.sample([chr(i) for i in range(97, 123)], random.randint(5, 15)))
+        title = "".join(RANDOM_WORDS(random.randint(1, 3))).title()
         symbol = "".join(random.sample([chr(i) for i in range(65, 91)], random.randint(3, 6)))
         return title, symbol
 
