@@ -2,7 +2,7 @@ import random
 import time
 
 from loguru import logger
-from config import OMNISEA_CONTRACT, OMNISEA_ABI
+from config import OMNISEA_CONTRACT, OMNISEA_ABI, RANDOM_WORDS
 from utils.gas_checker import check_gas
 from utils.helpers import retry
 from .account import Account
