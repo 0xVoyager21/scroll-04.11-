@@ -15,6 +15,9 @@ with open('data/abi/bridge/deposit.json') as file:
 with open('data/abi/bridge/withdraw.json') as file:
     WITHDRAW_ABI = json.load(file)
 
+with open('data/english_words.txt', 'r', encoding='utf-8') as file:
+    RANDOM_WORDS = [row.strip() for row in file]
+    
 with open('data/abi/bridge/oracle.json') as file:
     ORACLE_ABI = json.load(file)
 
