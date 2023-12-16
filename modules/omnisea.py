@@ -16,7 +16,7 @@ class Omnisea(Account):
 
     @staticmethod
     def generate_collection_data():
-        title = "".join(random.sample([chr(i) for i in range(97, 123)], random.randint(5, 15)))
+        title = "".join(RANDOM_WORDS(random.randint(1, 3))).title()
         symbol = "".join(random.sample([chr(i) for i in range(65, 91)], random.randint(3, 6)))
         return title, symbol
 
